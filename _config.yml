@@ -1,0 +1,20 @@
+permalink: /:title/
+description: 
+
+images: "/assets/images/"
+
+linkopener: 'target="_blank" rel="noopener noreferrer"'
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+sass:
+  style: compressed
