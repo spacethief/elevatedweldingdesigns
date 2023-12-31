@@ -1,15 +1,17 @@
 permalink: /:title/
-description: 
+description:
 
-images: "/assets/images/"
+images: '/assets/images/'
+
+company: 'Elevated Welding &amp; Designs'
 
 linkopener: 'target="_blank" rel="noopener noreferrer"'
 
 defaults:
   - scope:
-      path: ""
+      path: ''
     values:
-      layout: "default"
+      layout: 'default'
 
 plugins:
   - jekyll-feed

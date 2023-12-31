@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% if page.title == 'Home' %}{{site.company}}{% else %}{{ page.title }} |
+      {{site.company}}{% endif %}
+    </title>
+    <script
+      src="https://kit.fontawesome.com/67eb250e26.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ '/assets/css/styles.css' | relative_url }}"
+    />
+    {% include featuredimage.html %}
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="32x32" />
+    <link
+      rel="shortcut icon"
+      sizes="196x196"
+      href="{{ '/favicon.ico' | relative_url }}"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{{ '/favicon.ico' | relative_url }}"
+      sizes="180x180"
+    />
+    {% feed_meta %} {% seo title=false %}
+  </head>
+  <body>
+    <div id="page" class="{{page.title | slugify}}">
+      <header id="header">
+        <div class="mainlogo">
+          <a href="{{'/' | relative_url }}"
+            ><img
+              src="{{ '/assets/images/ewd_logo.png' | relative_url }}"
+              alt="A stylized image of a welding helmet with the text: Elevated Welding and Designs, LLC"
+              title="{{site.company}}"
+          /></a>
+        </div>
+      </header>

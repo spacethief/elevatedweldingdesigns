@@ -1,0 +1,18 @@
+---
+---
+
+@import 'main';
+@import 'responsive';
+
+$images: '{{ site.images }}';
+
+#hotimage {
+  background-image: url('#{$images}fire.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  max-width: 1000px;
+  margin: 0 auto;
+}

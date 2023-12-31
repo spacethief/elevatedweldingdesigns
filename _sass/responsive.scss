@@ -1,0 +1,91 @@
+/* Media Queries */
+$screen-tablet: 760px;
+$screen-medium: 1000px;
+$screen-large: 1200px;
+
+//tablet portrait
+@media screen and (min-width: $screen-tablet) {
+  body {
+    font-size: 18px;
+  }
+
+  nav.main .nav_container {
+    grid-template-columns: auto auto auto auto 50px auto auto auto;
+    grid-template-areas: 'home about projects resume . twitter facebook youtube';
+    font-size: 1em;
+    span.about-the-artist {
+      grid-column-start: 2;
+      grid-column-end: initial;
+    }
+    a {
+      line-height: 60px;
+      padding: 20px 32px 18px 0;
+    }
+  }
+
+  #page > footer {
+    font-size: 1.2em;
+  }
+}
+
+//small desktop
+@media screen and (min-width: $screen-medium) {
+  body {
+    font-size: 14px;
+  }
+
+  //header image
+  header .mainlogo {
+    img {
+      max-width: 300px;
+    }
+  }
+
+  //navigation
+  nav.main .nav_container {
+    padding-right: 15px;
+    padding-left: 15px;
+    grid-template-columns: auto auto auto auto 120px auto auto auto;
+    a {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+//about home
+#page.home .container {
+  .about {
+    padding: 25px 15px;
+    h1,
+    p {
+      max-width: $full-width;
+    }
+  }
+}
+
+//footer
+#page > footer {
+  font-size: 1.1em;
+  section {
+    grid-template-columns: repeat(2, 500px);
+  }
+  .copy {
+    p {
+      text-align: left;
+    }
+  }
+  .contact-container {
+    width: auto;
+  }
+  .socials {
+    justify-self: right;
+  }
+}
+
+//big desktop
+@media screen and (min-width: $screen-large) {
+  #page.projects .content {
+    grid-column-gap: 5%;
+    grid-template-columns: repeat(3, 360px);
+  }
+}
